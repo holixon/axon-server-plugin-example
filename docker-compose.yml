@@ -1,0 +1,12 @@
+version: '3.1'
+# https://hub.docker.com/r/axoniq/axonserver
+services:
+  axon-server:
+    image: axoniq/axonserver:4.5.4.1
+    environment:
+      - AXONIQ_AXONSERVER_DEVMODE_ENABLED=true
+      - SPRING_SERVLET_MULTIPART_MAX-FILE-SIZE=16MB
+      - SPRING_SERVLET_MULTIPART_MAX-REQUEST-SIZE=16MB
+    ports:
+      - "8024:8024"
+      - "8124:8124"
