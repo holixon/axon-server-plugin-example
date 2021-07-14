@@ -12,3 +12,5 @@ alias axon-cli.upload="$AXON_CLI_EXEC upload-plugin -f $projectdir/target/$PLUGI
 alias axon-cli.activate="$AXON_CLI_EXEC activate-plugin -p $PLUGIN_NAME -v $PLUGIN_VERSION"
 alias axon-cli.pause="$AXON_CLI_EXEC pause-plugin -p $PLUGIN_NAME -v $PLUGIN_VERSION"
 alias axon-cli.delete="$AXON_CLI_EXEC delete-plugin -p $PLUGIN_NAME -v $PLUGIN_VERSION"
+
+alias axon-server.start="docker compose up"
