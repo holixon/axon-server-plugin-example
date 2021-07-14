@@ -5,15 +5,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.holixon.axon.example</groupId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <artifactId>axon-server-plugin-example</artifactId>
 
   <!-- Set to bundle to create an OSGi bundle jar file -->
   <packaging>bundle</packaging>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
+
     <axon-server-plugin-api.version>4.5</axon-server-plugin-api.version>
     <maven-felix.version>5.1.2</maven-felix.version>
   </properties>
@@ -34,6 +38,17 @@
       <artifactId>org.osgi.core</artifactId>
       <version>6.0.0</version>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.30</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
     </dependency>
   </dependencies>
 
@@ -63,7 +78,9 @@
               io.axoniq.axonserver.plugin.*;io.axoniq.axonserver.grpc.*;org.osgi.framework;com.google.protobuf.*
             </Import-Package>
             <!-- internal packages for the bundle -->
-            <Private-Package>io.holixon.axon.example.plugin.*</Private-Package>
+            <Private-Package>
+              io.holixon.axon.example.plugin.*,ch.qos.logback.core.*
+            </Private-Package>
             <!-- references the BundleActivator class -->
             <Bundle-Activator>io.holixon.axon.example.plugin.Activator</Bundle-Activator>
           </instructions>

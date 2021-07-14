@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+alias console.refresh="source _console.sh"
+
 AXON_CLI_EXEC="$HOME/.m2/repository/io/axoniq/axonserver/axonserver-cli/4.5.4.1/axonserver-cli-4.5.4.1-exec.jar"
 PLUGIN_ARTIFACT="axon-server-plugin-example"
 PLUGIN_NAME="io.holixon.axon.example.$PLUGIN_ARTIFACT"
-PLUGIN_VERSION="0.0.1-SNAPSHOT"
+PLUGIN_VERSION="0.0.1"
 
 projectdir=`pwd`
 
