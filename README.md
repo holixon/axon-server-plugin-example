@@ -2,6 +2,20 @@
 
 A simple "hello world" example using the [axon server plugin api](https://github.com/AxonIQ/axon-server-plugin-api)
 
+## Running the example
+
+* mvn package create bundle jar in target/
+* upload the jar to an axon server
+
+You can use the docker compose file to run the server.
+
+For convenience, import the `_console.sh` to your shell and provide the path to the axonserver-cli, then you can use the aliases:
+
+* `axon-cli.upload` - uploads the jar in target/
+* `axon-cli.activate`
+* `axon-cli.pause`
+* `axon-cli.delete`
+
 ## Axon Server Configuration
 
 For this example, the server is run via [docker-compose.yml](./docker-compose.yml) 
