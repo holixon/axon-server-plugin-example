@@ -1,5 +1,7 @@
 # axon-server-plugin-example
 
+[![example](https://img.shields.io/badge/lifecycle-EXAMPLE-blue.svg)](https://github.com/holisticon#open-source-lifecycle)
+
 A simple "hello world" example using the [axon server plugin api](https://github.com/AxonIQ/axon-server-plugin-api)
 
 ## Running the example
